@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Круглая Математика</string>
+    <string name="button_start_task">Решать примеры</string>
+    <string name="lesson1">Cложение и вычитание цифр </string>
+    <string name="lesson2">Умножение и деление цифр</string>
+    <string name="lesson3">Сложение и вычитание столбиком двухзначных и трехзначных чисел</string>
+    <string name="lesson4">Умножение и деление столбиком двухзначных и трехзначных чисел</string>
+    <string name="lesson5">Десятичные дроби, их сложение и вычитание столбиком</string>
+    <string name="lesson6">Умножение и деление десятичных дробей столбиком</string>
+    <string name="lesson7">Возведение в степень числа и извлечение корня</string>
+    <string name="back">Назад</string>
+
+    v
+
+</resources>

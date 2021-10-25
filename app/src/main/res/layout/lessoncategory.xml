@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#593939"
+    tools:context=".LessonCategoryActivity">
+
+    <ImageView
+        android:id="@+id/text_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/backgrondimage"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/LessonsTitle"
+            android:layout_width="410dp"
+            android:layout_height="88dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:text="Уроки"
+            android:textSize="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/textLesson1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_style"
+            android:text="@string/lesson1"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/textLesson2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_style"
+            android:text="@string/lesson2"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/textLesson3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_style"
+            android:text="@string/lesson3"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/textLesson4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_style"
+            android:text="@string/lesson4"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/textLesson5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_style"
+            android:text="@string/lesson5"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/textLesson6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_style"
+            android:text="@string/lesson6"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/textLesson7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_style"
+            android:text="@string/lesson7"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/backtominemenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/button_style"
+            android:text="@string/back"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/text_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/backgrondimage"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="366dp"
+        android:layout_height="369dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/title" />
+
+    <LinearLayout
+        android:id="@+id/start_layout"
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="262dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/button_start"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_style"
+            android:text="@string/button_start_task"
+            android:textColor="@color/black95"
+            android:textSize="19dp" />
+
+        <Button
+            android:id="@+id/button_info"
+            android:layout_width="163dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_style"
+            android:text="@string/button_start_lesson"
+            android:textColor="@color/black95"
+            android:textSize="19dp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
