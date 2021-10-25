@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/button_style"
-            android:text="Пред. Страница" />
+            android:text="@string/PrevStr" />
 
         <Button
             android:id="@+id/button"
@@ -67,6 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/button_style"
-            android:text="След. Страница" />
+            android:text="@string/NextStr"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
