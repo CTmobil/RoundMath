@@ -12,7 +12,49 @@
     <string name="PrevStr">Пред. Страница</string>
     <string name="NextStr">След. Страница</string>
     <string name="LessonStartButt">Учиться</string>
+    <string name="LessonTitle1">Учиться</string>
+    <string name="LessonText1str1">Учиться</string>
+    <string name="LessontText1str2">Учиться</string>
+    <string name="LessontText1str3">Учиться</string>
+    <string name="LessontText1str4">Учиться</string>
+    <string name="LessontText1str5">Учиться</string>
+    <string name="LessonTitle2">Учиться</string>
+    <string name="LessonText2str1">Учиться</string>
+    <string name="LessontText2str2">Учиться</string>
+    <string name="LessontText2str3">Учиться</string>
+    <string name="LessontText2str4">Учиться</string>
+    <string name="LessontText2str5">Учиться</string>
+    <string name="LessonTitle3">Учиться</string>
+    <string name="LessonText3str1">Учиться</string>
+    <string name="LessontText3str2">Учиться</string>
+    <string name="LessontText3str3">Учиться</string>
+    <string name="LessontText3str4">Учиться</string>
+    <string name="LessontText3str5">Учиться</string>
+    <string name="LessonTitle4">Учиться</string>
+    <string name="LessonText4str1">Учиться</string>
+    <string name="LessontText4str2">Учиться</string>
+    <string name="LessontText4str3">Учиться</string>
+    <string name="LessontText4str4">Учиться</string>
+    <string name="LessontText4str5">Учиться</string>
+    <string name="LessonTitle5">Учиться</string>
+    <string name="LessonText5str1">Учиться</string>
+    <string name="LessontText5str2">Учиться</string>
+    <string name="LessontText5str3">Учиться</string>
+    <string name="LessontText5str4">Учиться</string>
+    <string name="LessontText5str5">Учиться</string>
+    <string name="LessonTitle6">Учиться</string>
+    <string name="LessonText6str1">Учиться</string>
+    <string name="LessontText6str2">Учиться</string>
+    <string name="LessontText6str3">Учиться</string>
+    <string name="LessontText6str4">Учиться</string>
+    <string name="LessontText6str5">Учиться</string>
+    <string name="LessonTitle7">Учиться</string>
+    <string name="LessonText7str1">Учиться</string>
+    <string name="LessontText7str2">Учиться</string>
+    <string name="LessontText7str3">Учиться</string>
+    <string name="LessontText7str4">Учиться</string>
+    <string name="LessontText7str5">Учиться</string>
 
-    v
+
 
 </resources>
