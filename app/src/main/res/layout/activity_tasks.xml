@@ -66,34 +66,9 @@
             app:layout_constraintVertical_bias="0.946">
 
             <Button
-                android:id="@+id/buttonAnswer3"
+                android:id="@+id/buttonAnswer1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="7sp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:text="Ответ3" />
-
-            <Button
-                android:id="@+id/buttonAnswer4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="7sp"
-                android:layout_weight="1"
-                android:background="@drawable/button_style"
-                android:text="Ответ 4" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight=""
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/buttonAnswer1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="7sp"
                 android:layout_weight="1"
                 android:background="@drawable/button_style"
@@ -106,7 +81,32 @@
                 android:layout_margin="7sp"
                 android:layout_weight="1"
                 android:background="@drawable/button_style"
-                android:text="Ответ 2           " />
+                android:text="Ответ 2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=""
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonAnswer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7sp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:text="Ответ 3" />
+
+            <Button
+                android:id="@+id/buttonAnswer4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7sp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style"
+                android:text="Ответ 4" />
         </LinearLayout>
 
 

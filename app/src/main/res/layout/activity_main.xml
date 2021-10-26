@@ -20,7 +20,9 @@
         android:layout_width="366dp"
         android:layout_height="369dp"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginEnd="18dp"
+        android:layout_marginBottom="584dp"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/title" />
 
@@ -32,16 +34,16 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="276dp"
-        android:layout_marginEnd="85dp"
-        android:layout_marginBottom="262dp"
-        android:orientation="vertical"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="473dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="64dp"
         android:gravity="center"
+        android:orientation="vertical"
         android:padding="10dp">
 
         <Button
-            android:id="@+id/button_start"
+            android:id="@+id/button_startTasks"
             android:layout_width="wrap_content"
             android:layout_height="88dp"
             android:layout_marginBottom="10dp"
@@ -51,12 +53,12 @@
             android:textSize="19dp" />
 
         <Button
-            android:id="@+id/button_info"
+            android:id="@+id/button_startless"
             android:layout_width="163dp"
             android:layout_height="70dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/button_style"
-            android:text="@string/button_start_lesson"
+            android:text="@string/LessonStartButt"
             android:textColor="@color/black95"
             android:textSize="19dp" />
 

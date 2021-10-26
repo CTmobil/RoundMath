@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.КруглаяМатематика">
-        <activity android:name=".TasksActivity"></activity>
+        <activity android:name=".TasksCategoryActivity"></activity>
+        <activity android:name=".TasksActivity" />
         <activity android:name=".LessonActivity" />
         <activity android:name=".LessonCategoryActivity" />
         <activity android:name=".MainActivity">
