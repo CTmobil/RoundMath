@@ -38,6 +38,7 @@
             android:gravity="center"
             android:text="Уроки"
             android:textSize="50dp"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -48,6 +49,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/button_style"
             android:text="@string/lesson1"
+            android:textColor="@color/black"
             android:textSize="15dp" />
 
         <Button
@@ -57,6 +59,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/button_style"
             android:text="@string/lesson2"
+            android:textColor="@color/black"
             android:textSize="15dp" />
 
         <Button
@@ -66,6 +69,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/button_style"
             android:text="@string/lesson3"
+            android:textColor="@color/black"
             android:textSize="15dp" />
 
         <Button
@@ -75,6 +79,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/button_style"
             android:text="@string/lesson4"
+            android:textColor="@color/black"
             android:textSize="15dp" />
 
         <Button
@@ -84,6 +89,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/button_style"
             android:text="@string/lesson5"
+            android:textColor="@color/black"
             android:textSize="15dp" />
 
         <Button
@@ -93,6 +99,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/button_style"
             android:text="@string/lesson6"
+            android:textColor="@color/black"
             android:textSize="15dp" />
 
         <Button
@@ -102,6 +109,7 @@
             android:layout_margin="5dp"
             android:background="@drawable/button_style"
             android:text="@string/lesson7"
+            android:textColor="@color/black"
             android:textSize="15dp" />
 
         <Button
@@ -113,6 +121,7 @@
             android:layout_marginTop="80dp"
             android:background="@drawable/button_style"
             android:text="@string/back"
+            android:textColor="@color/black"
             android:textSize="15dp" />
 
     </LinearLayout>
