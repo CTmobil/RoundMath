@@ -42,7 +42,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/textLesson1"
+            android:id="@+id/textTask1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -52,7 +52,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/textLesson2"
+            android:id="@+id/textTask2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -62,7 +62,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/textLesson3"
+            android:id="@+id/textTask3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -72,17 +72,17 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/textLesson4"
+            android:id="@+id/textTask4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/button_style"
             android:text="@string/lesson4"
             android:textColor="@color/black"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <Button
-            android:id="@+id/textLesson5"
+            android:id="@+id/textTask5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -92,7 +92,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/textLesson6"
+            android:id="@+id/textTask6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -102,7 +102,7 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/textLesson7"
+            android:id="@+id/textTask7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -112,11 +112,11 @@
             android:textSize="15dp" />
 
         <Button
-            android:id="@+id/backtominemenu"
+            android:id="@+id/backtominemenuTasks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="80dp"
             android:background="@drawable/button_style"
             android:text="@string/back"

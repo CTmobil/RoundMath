@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Круглая Математика</string>
     <string name="button_start_task">Решать примеры</string>
-    <string name="lesson1">Cложение и вычитание чисел </string>
-    <string name="lesson2">Умножение и деление чисел</string>
+    <string name="lesson1">Cложение и вычитание однозначных чисел </string>
+    <string name="lesson2">Умножение и деление однозначных чисел</string>
     <string name="lesson3">Сложение и вычитание столбиком двухзначных и трехзначных чисел</string>
     <string name="lesson4">Умножение и деление столбиком двухзначных и трехзначных чисел</string>
     <string name="lesson5">Десятичные дроби, их сложение и вычитание столбиком</string>
@@ -12,48 +12,59 @@
     <string name="PrevStr">Пред. Страница</string>
     <string name="NextStr">След. Страница</string>
     <string name="LessonStartButt">Учиться</string>
-    <string name="LessonTitle1">Учиться</string>
-    <string name="LessonText1str1">Учиться</string>
-    <string name="LessontText1str2">Учиться</string>
-    <string name="LessontText1str3">Учиться</string>
-    <string name="LessontText1str4">Учиться</string>
-    <string name="LessontText1str5">Учиться</string>
-    <string name="LessonTitle2">Учиться</string>
-    <string name="LessonText2str1">Учиться</string>
-    <string name="LessontText2str2">Учиться</string>
-    <string name="LessontText2str3">Учиться</string>
-    <string name="LessontText2str4">Учиться</string>
-    <string name="LessontText2str5">Учиться</string>
-    <string name="LessonTitle3">Учиться</string>
-    <string name="LessonText3str1">Учиться</string>
-    <string name="LessontText3str2">Учиться</string>
-    <string name="LessontText3str3">Учиться</string>
-    <string name="LessontText3str4">Учиться</string>
-    <string name="LessontText3str5">Учиться</string>
-    <string name="LessonTitle4">Учиться</string>
-    <string name="LessonText4str1">Учиться</string>
-    <string name="LessontText4str2">Учиться</string>
-    <string name="LessontText4str3">Учиться</string>
-    <string name="LessontText4str4">Учиться</string>
-    <string name="LessontText4str5">Учиться</string>
-    <string name="LessonTitle5">Учиться</string>
-    <string name="LessonText5str1">Учиться</string>
-    <string name="LessontText5str2">Учиться</string>
-    <string name="LessontText5str3">Учиться</string>
-    <string name="LessontText5str4">Учиться</string>
-    <string name="LessontText5str5">Учиться</string>
-    <string name="LessonTitle6">Учиться</string>
-    <string name="LessonText6str1">Учиться</string>
-    <string name="LessontText6str2">Учиться</string>
-    <string name="LessontText6str3">Учиться</string>
-    <string name="LessontText6str4">Учиться</string>
-    <string name="LessontText6str5">Учиться</string>
-    <string name="LessonTitle7">Учиться</string>
-    <string name="LessonText7str1">Учиться</string>
-    <string name="LessontText7str2">Учиться</string>
-    <string name="LessontText7str3">Учиться</string>
-    <string name="LessontText7str4">Учиться</string>
-    <string name="LessontText7str5">Учиться</string>
+    <string name="LessonTitle1">Cложение и вычитание
+        однозначных чисел</string>
+    <string name="LessonText1str1">t1str1</string>
+    <string name="LessontText1str2">t1str2</string>
+    <string name="LessontText1str3">t1str3</string>
+    <string name="LessontText1str4">t1str4</string>
+    <string name="LessontText1str5">t1str5</string>
+    <string name="LessonTitle2">Умножение и деление
+        однозначных чисел</string>
+    <string name="LessonText2str1">t2str1</string>
+    <string name="LessontText2str2">t2str2</string>
+    <string name="LessontText2str3">t2str3</string>
+    <string name="LessontText2str4">t2str4</string>
+    <string name="LessontText2str5">t2str5</string>
+    <string name="LessonTitle3">Сложение и вычитание
+        столбиком двухзначных
+        и трехзначных чисел</string>
+    <string name="LessonText3str1">t3str1</string>
+    <string name="LessontText3str2">t3str2</string>
+    <string name="LessontText3str3">t3str3</string>
+    <string name="LessontText3str4">t3str4</string>
+    <string name="LessontText3str5">t3str5</string>
+    <string name="LessonTitle4">Умножение и деление
+        столбиком двухзначных
+        и трехзначных чисел</string>
+    <string name="LessonText4str1">t4str1</string>
+    <string name="LessontText4str2">t4str2</string>
+    <string name="LessontText4str3">t4str3</string>
+    <string name="LessontText4str4">t4str4</string>
+    <string name="LessontText4str5">t4str5</string>
+    <string name="LessonTitle5">Десятичные дроби,
+        их сложение
+        и вычитание столбиком</string>
+    <string name="LessonText5str1">t5str1</string>
+    <string name="LessontText5str2">t5str2</string>
+    <string name="LessontText5str3">t5str3</string>
+    <string name="LessontText5str4">t5str4</string>
+    <string name="LessontText5str5">t5str5</string>
+    <string name="LessonTitle6">Умножение и деление
+        десятичных дробей
+        столбиком</string>
+    <string name="LessonText6str1">t6str1</string>
+    <string name="LessontText6str2">t6str2</string>
+    <string name="LessontText6str3">t6str3</string>
+    <string name="LessontText6str4">t6str4</string>
+    <string name="LessontText6str5">t6str5</string>
+    <string name="LessonTitle7">Возведение в степень
+        числа</string>
+    <string name="LessonText7str1">t7str1</string>
+    <string name="LessontText7str2">t7str2</string>
+    <string name="LessontText7str3">t7str3</string>
+    <string name="LessontText7str4">t7str4</string>
+    <string name="LessontText7str5">t7str5</string>
 
 
 

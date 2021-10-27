@@ -20,6 +20,7 @@ public class LessonCategoryActivity extends AppCompatActivity implements View.On
         Button lesson5 = (Button)findViewById(R.id.textLesson5);
         Button lesson6 = (Button)findViewById(R.id.textLesson6);
         Button lesson7 = (Button)findViewById(R.id.textLesson7);
+        Button backtomenu = (Button)findViewById(R.id.backtominemenuLess);
         lesson1.setOnClickListener(this);
         lesson2.setOnClickListener(this);
         lesson3.setOnClickListener(this);
@@ -27,6 +28,7 @@ public class LessonCategoryActivity extends AppCompatActivity implements View.On
         lesson5.setOnClickListener(this);
         lesson6.setOnClickListener(this);
         lesson7.setOnClickListener(this);
+        backtomenu.setOnClickListener(this);
 
     }
 
@@ -68,7 +70,10 @@ public class LessonCategoryActivity extends AppCompatActivity implements View.On
                 intentLess7.putExtra("IDLess", 7);
                 startActivity(intentLess7);
                 break;
-
+            case R.id.backtominemenuLess:
+                Intent intentBack = new Intent(this, MainActivity.class);
+                startActivity(intentBack);
+                break;
 
         }
     }
