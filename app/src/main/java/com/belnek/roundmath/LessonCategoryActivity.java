@@ -29,7 +29,16 @@ public class LessonCategoryActivity extends AppCompatActivity implements View.On
         lesson6.setOnClickListener(this);
         lesson7.setOnClickListener(this);
         backtomenu.setOnClickListener(this);
-
+        lesson3.setClickable(false);
+        lesson3.setVisibility(View.INVISIBLE);
+        lesson4.setClickable(false);
+        lesson4.setVisibility(View.INVISIBLE);
+        lesson5.setClickable(false);
+        lesson5.setVisibility(View.INVISIBLE);
+        lesson6.setClickable(false);
+        lesson6.setVisibility(View.INVISIBLE);
+        lesson7.setClickable(false);
+        lesson7.setVisibility(View.INVISIBLE);
     }
 
     @Override

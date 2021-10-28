@@ -10,39 +10,30 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/lessonbackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/lessonbackground" />
-
-    <TextView
-        android:id="@+id/TextTask"
-        android:layout_width="355dp"
-        android:layout_height="319dp"
-        android:text=""
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/TitleTextTasks"
-        android:layout_width="330dp"
-        android:layout_height="129dp"
+        android:layout_width="336dp"
+        android:layout_height="111dp"
         android:gravity="center"
         android:text=""
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="375dp"
         android:layout_height="119dp"
         android:gravity="center"
@@ -110,5 +101,20 @@
 
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextTask1"
+        android:layout_width="316dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="157dp"
+        android:gravity="center"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

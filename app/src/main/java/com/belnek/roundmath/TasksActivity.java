@@ -3,9 +3,12 @@ package com.belnek.roundmath;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +38,8 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
     Intent intentBack;
     ScheduledExecutorService executor;
     Runnable task;
+    int desres;
+    int edres;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +47,11 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_tasks);
         Bundle arguments = getIntent().getExtras();
         IDTask = arguments.getInt("IDTask");
-        TextTask = (TextView) findViewById(R.id.TextTask);
         BtnAnswer1 = (Button) findViewById(R.id.buttonAnswer1);
         BtnAnswer2 = (Button) findViewById(R.id.buttonAnswer2);
         BtnAnswer3 = (Button) findViewById(R.id.buttonAnswer3);
         BtnAnswer4 = (Button) findViewById(R.id.buttonAnswer4);
+        TextTask = (TextView) findViewById(R.id.TextTask1);
         TitleId = IDTask;
         intentBack =  new Intent(this, TasksCategoryActivity.class);
         ExampleCounter = 1;
@@ -58,6 +63,10 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
             startActivity(intentBack);
             executor.shutdownNow();
         }
+            BtnAnswer1.setClickable(true);
+            BtnAnswer2.setClickable(true);
+            BtnAnswer3.setClickable(true);
+            BtnAnswer4.setClickable(true);
             switch (IDTask){
                 case 1:
                     displayingExample(NumberGen(9, 1), NumberGen(9, 1), NumberGen(2, 1));
@@ -165,6 +174,7 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
     }
     public void displayingExample(Integer num1, Integer num2, int znak)
     {
+
         switch(znak)
         {
             case 1:
@@ -188,7 +198,52 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
                 rezult = num1 * num2;
                 example = num1.toString() + " " + znakStr + " " + num2.toString() + " = ";
         }
+        switch(num1)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+        }
+        switch(num2)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+        }
         TextTask.setText(example);
+
+
+
     }
     public void displayingAnswers(Integer res, Integer Answerr2, Integer Answerr3, Integer Answerr4)
     {
@@ -228,6 +283,11 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
     {
         Toast.makeText(getApplicationContext(),
                 "Верно!", Toast.LENGTH_SHORT).show();
+        BtnAnswer1.setClickable(false);
+        BtnAnswer2.setClickable(false);
+        BtnAnswer3.setClickable(false);
+        BtnAnswer4.setClickable(false);
+        TextTask.setText(TextTask.getText() + rezult.toString());
         executor = Executors.newSingleThreadScheduledExecutor();
         executor.schedule(task, 5, TimeUnit.SECONDS);
 

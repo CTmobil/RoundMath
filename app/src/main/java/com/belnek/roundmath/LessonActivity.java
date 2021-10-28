@@ -9,6 +9,7 @@ import android.icu.text.CaseMap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -24,6 +25,7 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
     Button BtnNext;
     Button BtnBack;
     int IDLess;
+    ImageView image;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,7 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
         Timer mTimer = new Timer();
         MyTimerTask myTimerTask = new MyTimerTask();
         TitleId = IDLess;
+        image = (ImageView) findViewById(R.id.Image);
         mTimer.schedule(myTimerTask, 0, 100);
         switch (IDLess){
             case 1:
@@ -117,18 +120,26 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
                 {
                     case 1:
                         TextLesson.setText(R.string.LessonText1str1);
+                        image.setAlpha(0f);
                         break;
                     case 2:
                         TextLesson.setText(R.string.LessontText1str2);
+                        image.setImageResource(R.drawable.t1s2);
+                        image.setAlpha(1f);
                         break;
                     case 3:
                         TextLesson.setText(R.string.LessontText1str3);
+                        image.setAlpha(0f);
                         break;
                     case 4:
                         TextLesson.setText(R.string.LessontText1str4);
+                        image.setImageResource(R.drawable.t1s4);
+                        image.setAlpha(1f);
                         break;
                     case 5:
                         TextLesson.setText(R.string.LessontText1str5);
+                        image.setImageResource(R.drawable.t1s5);
+                        image.setAlpha(1f);
                         break;
 
 
@@ -139,18 +150,26 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
                 {
                     case 1:
                         TextLesson.setText(R.string.LessonText2str1);
+                        image.setAlpha(0f);
                         break;
                     case 2:
                         TextLesson.setText(R.string.LessontText2str2);
+                        image.setImageResource(R.drawable.t2s2);
+                        image.setAlpha(1f);
                         break;
                     case 3:
                         TextLesson.setText(R.string.LessontText2str3);
+                        image.setImageResource(R.drawable.t2s3);
+                        image.setAlpha(1f);
                         break;
                     case 4:
                         TextLesson.setText(R.string.LessontText2str4);
-                        break;
+                        image.setImageResource(R.drawable.t2s4);
+                        image.setAlpha(1f);break;
                     case 5:
                         TextLesson.setText(R.string.LessontText2str5);
+                        image.setImageResource(R.drawable.t2s5);
+                        image.setAlpha(1f);
                         break;
 
 
