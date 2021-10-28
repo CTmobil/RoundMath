@@ -27,15 +27,15 @@
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintVertical_bias="0.407" />
 
     <TextView
         android:id="@+id/TitleTextTasks"
-        android:layout_width="331dp"
-        android:layout_height="66dp"
-        android:text=""
-        android:textSize="50sp"
+        android:layout_width="330dp"
+        android:layout_height="129dp"
         android:gravity="center"
+        android:text=""
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

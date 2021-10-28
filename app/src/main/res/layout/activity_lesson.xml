@@ -18,16 +18,15 @@
 
     <TextView
         android:id="@+id/TextLesson"
-        android:layout_width="355dp"
-        android:layout_height="319dp"
+        android:layout_width="382dp"
+        android:layout_height="169dp"
         android:text=""
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.279" />
+        app:layout_constraintVertical_bias="0.163" />
 
     <TextView
         android:id="@+id/TitleText"
@@ -43,15 +42,15 @@
         app:layout_constraintVertical_bias="0.024" />
 
     <LinearLayout
-        android:layout_width="375dp"
-        android:layout_height="119dp"
+        android:layout_width="340dp"
+        android:layout_height="121dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.946">
+        app:layout_constraintVertical_bias="0.942">
 
         <Button
             android:id="@+id/buttonback"
@@ -59,6 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/button_style"
+            android:layout_marginHorizontal="7sp"
             android:text="@string/PrevStr" />
 
         <Button
@@ -66,8 +66,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginHorizontal="7sp"
             android:background="@drawable/button_style"
-            android:text="@string/NextStr"
-            />
+            android:text="@string/NextStr" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="351dp"
+        android:layout_height="251dp"
+        app:srcCompat="@drawable/t1s5"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="277dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

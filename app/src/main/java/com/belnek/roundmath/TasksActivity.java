@@ -12,6 +12,9 @@ import android.widget.Toast;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class TasksActivity extends AppCompatActivity implements View.OnClickListener {
     Integer rezult;
@@ -29,9 +32,9 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
     Button BtnAnswer3;
     Button BtnAnswer4;
     int IDTask;
-    private Timer mTimer;
-    private MyTimerTask2 mMyTimerTask;
     Intent intentBack;
+    ScheduledExecutorService executor;
+    Runnable task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +48,50 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
         BtnAnswer3 = (Button) findViewById(R.id.buttonAnswer3);
         BtnAnswer4 = (Button) findViewById(R.id.buttonAnswer4);
         TitleId = IDTask;
-        mTimer = new Timer();
-        mMyTimerTask = new MyTimerTask2();
         intentBack =  new Intent(this, TasksCategoryActivity.class);
         ExampleCounter = 1;
         TitleT = (TextView) findViewById(R.id.TitleTextTasks);
-        TitleT.setText(R.string.LessonTitle1);
+        task = () -> {
+            if(ExampleCounter > 10)
+        {
 
+            startActivity(intentBack);
+            executor.shutdownNow();
+        }
+            switch (IDTask){
+                case 1:
+                    displayingExample(NumberGen(9, 1), NumberGen(9, 1), NumberGen(2, 1));
+                    while(Answer2== rezult || Answer2 == Answer3 || Answer2 == Answer4 || Answer3 == rezult || Answer3 == Answer4 || Answer4 == rezult){
+                        Answer2 = NumberGen(15, 1);
+                        Answer3 = NumberGen(15, 1);
+                        Answer4 = NumberGen(15, 1);
+                    }
+                    runOnUiThread(new Runnable() {
+
+                        @Override
+                        public void run() {
+
+                            // Stuff that updates the UI
+                            displayingAnswers(rezult, Answer2, Answer3, Answer4);
+
+                        }
+                    });
+
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+            }
+        };
         switch (IDTask){
             case 1:
                 TitleT.setText(R.string.LessonTitle1);
@@ -99,6 +139,8 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
     if(ClickedBtn.getText() == rezult.toString()){
         ExamplePassed();
         ExampleCounter++;}
+    else
+        ExampleDeclined();
 
 
     }
@@ -179,66 +221,21 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
                 break;
 
         }
-        mTimer.cancel();
-        mTimer.purge();
+
 
     }
     public void ExamplePassed()
     {
         Toast.makeText(getApplicationContext(),
                 "Верно!", Toast.LENGTH_SHORT).show();
-        mTimer.schedule(mMyTimerTask, 5000);
-        IsTaskEnd = false;
+        executor = Executors.newSingleThreadScheduledExecutor();
+        executor.schedule(task, 5, TimeUnit.SECONDS);
 
     }
     public void ExampleDeclined()
     {
         Toast.makeText(getApplicationContext(),
                 "Неверно, подумай еще!", Toast.LENGTH_SHORT).show();
-    }
-    class MyTimerTask2 extends TimerTask {
-
-        @Override
-        public void run() {
-            if(ExampleCounter > 10)
-            {startActivity(intentBack);
-            }
-            switch (IDTask){
-                case 1:
-                    displayingExample(NumberGen(9, 1), NumberGen(9, 1), NumberGen(2, 1));
-                    while(Answer2== rezult || Answer2 == Answer3 || Answer2 == Answer4 || Answer3 == rezult || Answer3 == Answer4 || Answer4 == rezult){
-                        Answer2 = NumberGen(15, 1);
-                        Answer3 = NumberGen(15, 1);
-                        Answer4 = NumberGen(15, 1);
-                    }
-                    runOnUiThread(new Runnable() {
-
-                        @Override
-                        public void run() {
-
-                            // Stuff that updates the UI
-                            displayingAnswers(rezult, Answer2, Answer3, Answer4);
-
-                        }
-                    });
-
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-            }
-
-
-        }
     }
 
     }

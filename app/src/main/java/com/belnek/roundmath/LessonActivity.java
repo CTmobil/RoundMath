@@ -281,6 +281,16 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
 
                 }
             });
+        else
+            runOnUiThread(new Runnable() {
+
+                @Override
+                public void run() {
+                    BtnNext.setText("Cлед. Страница");
+
+                }
+            });
+
         }
     }
 }
