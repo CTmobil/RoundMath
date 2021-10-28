@@ -20,6 +20,7 @@ import java.util.TimerTask;
 public class LessonActivity extends AppCompatActivity implements View.OnClickListener {
     public TextView Title;
     public TextView TextLesson;
+    private boolean isNeedStopMusic = true;
     public int TitleId;
     public int StrId;
     Button BtnNext;
@@ -85,16 +86,30 @@ public class LessonActivity extends AppCompatActivity implements View.OnClickLis
 
 
     }
+    @Override
+    public void onPause() {
+        super.onPause();
+        if(isNeedStopMusic)
+        stopService(new Intent(this, BGMusic.class));
+    }
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        isNeedStopMusic = true;
+        startService(new Intent(this, BGMusic.class));
+    }
 
     @Override
     public void onClick(View v) {
-
+        MainActivity.playSoundClick();
         switch (v.getId())
         {
             case R.id.buttonNext:
                 switch (StrId)
                 {
                     case 5:
+                        isNeedStopMusic = false;
                         Intent intentBack = new Intent(this, LessonCategoryActivity.class);
                         startActivity(intentBack);
                         break;

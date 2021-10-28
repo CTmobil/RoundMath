@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class LessonCategoryActivity extends AppCompatActivity implements View.OnClickListener {
+    private boolean isNeedStopMusic = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +41,26 @@ public class LessonCategoryActivity extends AppCompatActivity implements View.On
         lesson7.setClickable(false);
         lesson7.setVisibility(View.INVISIBLE);
     }
+    @Override
+    public void onBackPressed() {
+    }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        if(isNeedStopMusic)
+        stopService(new Intent(this, BGMusic.class));
+    }
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        isNeedStopMusic = true;
+        startService(new Intent(this, BGMusic.class));
+    }
+    @Override
     public void onClick(View v) {
+        MainActivity.playSoundClick();
         switch (v.getId()) {
             case R.id.textLesson1:
                 Intent intentLess1 = new Intent(this, LessonActivity.class);

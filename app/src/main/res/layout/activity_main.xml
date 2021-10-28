@@ -52,6 +52,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/button_style"
             android:text="@string/button_start_task"
+            android:textColor="#FB0000"
             android:textSize="19dp" />
 
         <Button
@@ -61,6 +62,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/button_style"
             android:text="@string/LessonStartButt"
+            android:textColor="#FB0000"
             android:textSize="19dp" />
 
 

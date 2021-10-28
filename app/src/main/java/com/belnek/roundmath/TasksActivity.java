@@ -23,6 +23,7 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
     Integer rezult;
     String znakStr;
     String example;
+    private boolean isNeedStopMusic = true;
     boolean IsTaskEnd = false;
     int Answer2, Answer3, Answer4;
     int ExampleCounter;
@@ -47,6 +48,7 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_tasks);
         Bundle arguments = getIntent().getExtras();
         IDTask = arguments.getInt("IDTask");
+        getIntent().removeExtra("IDTask");
         BtnAnswer1 = (Button) findViewById(R.id.buttonAnswer1);
         BtnAnswer2 = (Button) findViewById(R.id.buttonAnswer2);
         BtnAnswer3 = (Button) findViewById(R.id.buttonAnswer3);
@@ -57,23 +59,89 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
         ExampleCounter = 1;
         TitleT = (TextView) findViewById(R.id.TitleTextTasks);
         task = () -> {
-            if(ExampleCounter > 10)
-        {
+            if (ExampleCounter > 10) {
+                isNeedStopMusic = false;
+                startActivity(intentBack);
+                executor.shutdownNow();
+            } else {
+                BtnAnswer1.setClickable(true);
+                BtnAnswer2.setClickable(true);
+                BtnAnswer3.setClickable(true);
+                BtnAnswer4.setClickable(true);
+                switch (IDTask) {
+                    case 1:
+                        displayingExample(NumberGen(9, 1), NumberGen(9, 1), NumberGen(2, 1));
+                        while (Answer2 == rezult || Answer2 == Answer3 || Answer2 == Answer4 || Answer3 == rezult || Answer3 == Answer4 || Answer4 == rezult) {
+                            Answer2 = NumberGen(15, 1);
+                            Answer3 = NumberGen(15, 1);
+                            Answer4 = NumberGen(15, 1);
+                        }
+                        runOnUiThread(new Runnable() {
 
-            startActivity(intentBack);
-            executor.shutdownNow();
-        }
-            BtnAnswer1.setClickable(true);
-            BtnAnswer2.setClickable(true);
-            BtnAnswer3.setClickable(true);
-            BtnAnswer4.setClickable(true);
-            switch (IDTask){
+                            @Override
+                            public void run() {
+
+                                // Stuff that updates the UI
+                                displayingAnswers(rezult, Answer2, Answer3, Answer4);
+
+                            }
+                        });
+
+                        break;
+                    case 2:
+                        displayingExample(NumberGen(9, 1), NumberGen(9, 1), 3);
+                        while (Answer2 == rezult || Answer2 == Answer3 || Answer2 == Answer4 || Answer3 == rezult || Answer3 == Answer4 || Answer4 == rezult) {
+                            Answer2 = NumberGen(81, 5);
+                            Answer3 = NumberGen(81, 5);
+                            Answer4 = NumberGen(81, 5);
+                        }
+                        runOnUiThread(new Runnable() {
+
+                            @Override
+                            public void run() {
+
+                                // Stuff that updates the UI
+                                displayingAnswers(rezult, Answer2, Answer3, Answer4);
+
+                            }
+                        });
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                }
+            }
+        };
+
+
+            switch (IDTask) {
                 case 1:
+                    TitleT.setText(R.string.LessonTitle1);
                     displayingExample(NumberGen(9, 1), NumberGen(9, 1), NumberGen(2, 1));
-                    while(Answer2== rezult || Answer2 == Answer3 || Answer2 == Answer4 || Answer3 == rezult || Answer3 == Answer4 || Answer4 == rezult){
+                    Answer2 = NumberGen(15, 1);
+                    Answer3 = NumberGen(15, 1);
+                    Answer4 = NumberGen(15, 1);
+                    while (Answer2 == rezult || Answer2 == Answer3 || Answer2 == Answer4 || Answer3 == rezult || Answer3 == Answer4 || Answer4 == rezult) {
                         Answer2 = NumberGen(15, 1);
                         Answer3 = NumberGen(15, 1);
                         Answer4 = NumberGen(15, 1);
+                    }
+                    displayingAnswers(rezult, Answer2, Answer3, Answer4);
+                    break;
+                case 2:
+                    TitleT.setText("Умножение однозначных чисел");
+                    displayingExample(NumberGen(9, 1), NumberGen(9, 1), 3);
+                    while (Answer2 == rezult || Answer2 == Answer3 || Answer2 == Answer4 || Answer3 == rezult || Answer3 == Answer4 || Answer4 == rezult) {
+                        Answer2 = NumberGen(81, 5);
+                        Answer3 = NumberGen(81, 5);
+                        Answer4 = NumberGen(81, 5);
                     }
                     runOnUiThread(new Runnable() {
 
@@ -85,65 +153,49 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
 
                         }
                     });
-
-                    break;
-                case 2:
                     break;
                 case 3:
+                    TitleT.setText(R.string.LessonTitle3);
                     break;
                 case 4:
+                    TitleT.setText(R.string.LessonTitle4);
                     break;
                 case 5:
+                    TitleT.setText(R.string.LessonTitle5);
                     break;
                 case 6:
+                    TitleT.setText(R.string.LessonTitle6);
                     break;
                 case 7:
+                    TitleT.setText(R.string.LessonTitle7);
                     break;
             }
-        };
-        switch (IDTask){
-            case 1:
-                TitleT.setText(R.string.LessonTitle1);
-                displayingExample(NumberGen(9, 1), NumberGen(9, 1), NumberGen(2, 1));
-                Answer2 = NumberGen(15, 1);
-                Answer3 = NumberGen(15, 1);
-                Answer4 = NumberGen(15, 1);
-                while(Answer2== rezult || Answer2 == Answer3 || Answer2 == Answer4 || Answer3 == rezult || Answer3 == Answer4 || Answer4 == rezult){
-                    Answer2 = NumberGen(15, 1);
-                    Answer3 = NumberGen(15, 1);
-                    Answer4 = NumberGen(15, 1);
-                }
-                displayingAnswers(rezult, Answer2, Answer3, Answer4);
-                break;
-            case 2:
-                TitleT.setText(R.string.LessonTitle2);
-                break;
-            case 3:
-                TitleT.setText(R.string.LessonTitle3);
-                break;
-            case 4:
-                TitleT.setText(R.string.LessonTitle4);
-                break;
-            case 5:
-                TitleT.setText(R.string.LessonTitle5);
-                break;
-            case 6:
-                TitleT.setText(R.string.LessonTitle6);
-                break;
-            case 7:
-                TitleT.setText(R.string.LessonTitle7);
-                break;
+            BtnAnswer1.setOnClickListener(this);
+            BtnAnswer2.setOnClickListener(this);
+            BtnAnswer3.setOnClickListener(this);
+            BtnAnswer4.setOnClickListener(this);
+
         }
-        BtnAnswer1.setOnClickListener(this);
-        BtnAnswer2.setOnClickListener(this);
-        BtnAnswer3.setOnClickListener(this);
-        BtnAnswer4.setOnClickListener(this);
-
-
+    @Override
+    public void onBackPressed() {
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
+        if(isNeedStopMusic)
+        stopService(new Intent(this, BGMusic.class));
+    }
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+          isNeedStopMusic = true;
+        startService(new Intent(this, BGMusic.class));
     }
 
     @Override
     public void onClick(View v) {
+        MainActivity.playSoundClick();
     Button ClickedBtn = findViewById(v.getId());
     if(ClickedBtn.getText() == rezult.toString()){
         ExamplePassed();
@@ -283,6 +335,7 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
     {
         Toast.makeText(getApplicationContext(),
                 "Верно!", Toast.LENGTH_SHORT).show();
+        MainActivity.playSoundvern();
         BtnAnswer1.setClickable(false);
         BtnAnswer2.setClickable(false);
         BtnAnswer3.setClickable(false);
@@ -294,6 +347,8 @@ public class TasksActivity extends AppCompatActivity implements View.OnClickList
     }
     public void ExampleDeclined()
     {
+        MainActivity.playSoundnevern();
+
         Toast.makeText(getApplicationContext(),
                 "Неверно, подумай еще!", Toast.LENGTH_SHORT).show();
     }

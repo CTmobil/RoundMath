@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class TasksCategoryActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private boolean isNeedStopMusic = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,50 +28,79 @@ public class TasksCategoryActivity extends AppCompatActivity implements View.OnC
         lesson5.setOnClickListener(this);
         lesson6.setOnClickListener(this);
         lesson7.setOnClickListener(this);
+        lesson3.setClickable(false);
+        lesson3.setVisibility(View.INVISIBLE);
+        lesson4.setClickable(false);
+        lesson4.setVisibility(View.INVISIBLE);
+        lesson5.setClickable(false);
+        lesson5.setVisibility(View.INVISIBLE);
+        lesson6.setClickable(false);
+        lesson6.setVisibility(View.INVISIBLE);
+        lesson7.setClickable(false);
+        lesson7.setVisibility(View.INVISIBLE);
         backtomenu.setOnClickListener(this);
 
     }
-
+    @Override
+    public void onPause() {
+        super.onPause();
+        if(isNeedStopMusic) {
+            stopService(new Intent(this, BGMusic.class));
+        }
+    }
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        isNeedStopMusic = true;
+        startService(new Intent(this, BGMusic.class));
+    }
+    @Override
+    public void onBackPressed() {
+    }
     @Override
     public void onClick(View v) {
+        MainActivity.playSoundClick();
+        Intent intentTask = new Intent(this, TasksActivity.class);
         switch (v.getId()) {
             case R.id.textTask1:
-                Intent intentTask1 = new Intent(this, TasksActivity.class);
-                intentTask1.putExtra("IDTask", 1);
-                startActivity(intentTask1);
+                intentTask.putExtra("IDTask", 1);
+                isNeedStopMusic = false;
+                startActivity(intentTask);
                 break;
             case R.id.textTask2:
-                Intent intentTask2 = new Intent(this, TasksActivity.class);
-                intentTask2.putExtra("IDTask", 2);
-                startActivity(intentTask2);
+                intentTask.putExtra("IDTask", 2);
+                isNeedStopMusic = false;
+                startActivity(intentTask);
                 break;
             case R.id.textTask3:
-                Intent intentTask3 = new Intent(this, TasksActivity.class);
-                intentTask3.putExtra("IDTask", 3);
-                startActivity(intentTask3);
+                intentTask.putExtra("IDTask", 3);
+                isNeedStopMusic = false;
+                startActivity(intentTask);
                 break;
             case R.id.textTask4:
-                Intent intentTask4 = new Intent(this, TasksActivity.class);
-                intentTask4.putExtra("IDTask", 4);
-                startActivity(intentTask4);
+                intentTask.putExtra("IDTask", 4);
+                isNeedStopMusic = false;
+                startActivity(intentTask);
                 break;
             case R.id.textTask5:
-                Intent intentTask5 = new Intent(this, TasksActivity.class);
-                intentTask5.putExtra("IDTask", 5);
-                startActivity(intentTask5);
+                intentTask.putExtra("IDTask", 5);
+                isNeedStopMusic = false;
+                startActivity(intentTask);
                 break;
             case R.id.textTask6:
-                Intent intentTask6 = new Intent(this, TasksActivity.class);
-                intentTask6.putExtra("IDTask", 6);
-                startActivity(intentTask6);
+                intentTask.putExtra("IDTask", 6);
+                isNeedStopMusic = false;
+                startActivity(intentTask);
                 break;
             case R.id.textTask7:
-                Intent intentTask7 = new Intent(this, TasksActivity.class);
-                intentTask7.putExtra("IDTask", 7);
-                startActivity(intentTask7);
+                intentTask.putExtra("IDTask", 7);
+                isNeedStopMusic = false;
+                startActivity(intentTask);
                 break;
             case R.id.backtominemenuTasks:
                 Intent intentBack = new Intent(this, MainActivity.class);
+                isNeedStopMusic = false;
                 startActivity(intentBack);
                 break;
 

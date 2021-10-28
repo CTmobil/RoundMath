@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/button_style"
-            android:text="@string/lesson2"
+            android:text="Умножение однозначных чисел"
             android:textColor="@color/black"
             android:textSize="15dp" />
 
